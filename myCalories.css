@@ -1,0 +1,33 @@
+.progress-bar{
+    width: 90%;
+    margin: 50px;
+    align-items: center;
+
+}
+
+.progress{
+    position: relative;
+    width:45%;
+    height: 80%;
+    background: lightgray;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* js will adjust the color and width of this as the user inputs calories */
+.progressfill{
+    width: 10%;
+    background: rgb(255, 0, 0);
+    color: rgb(1rgb(81, 0, 255) 255, 0);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.progresstext{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    font: bolder 20px'Quicksand';
+    color: black;
+}
