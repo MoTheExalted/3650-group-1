@@ -43,6 +43,54 @@
 
      <section class="content">
         <!-- We put all the content in here-->
+        <div class="list-container">
+            <div class="Breakfast">
+                <img src="images/breakfastIcon.png" alt="breakfastIcon" class="food-icon">
+                <h3>Breakfast</h3>
+                <input class="food-name" type="text"  placeholder="Food Item">
+                <input class="breakfast-calories" type="text" required pattern="[0-9]*" placeholder="Calories">
+                <button onclick='addFood("breakfast-calories")' id="addbtn" class="toggle-add">+</button>
+            </div>
+            <ul class="breakfast-list">
+            </ul>
+        </div>
+   
+        <div class="list-container">
+            <div class="Lunch">
+                <img src="images/lunchIcon.png" alt="lunchIcon" class="food-icon">
+                <h3>Lunch</h3>
+                <input class="food-name" type="text" placeholder="Food Item">
+                <input class="lunch-calories" type="text" required pattern="[0-9]*" placeholder="Calories">
+                <button onclick='addFood("lunch-calories")'id="addbtn" class="toggle-add">+</button>
+            </div>
+            <ul class="lunch-list">
+            </ul>
+        </div>
+   
+        <div class="list-container">
+            <div class="Dinner">
+                <img src="images/dinnerIcon.png" alt="dinnerIcon" class="food-icon">
+                <h3>Dinner</h3>
+                <input class="food-name" type="text" placeholder="Food Item">
+                <input class="dinner-calories" type="text" required pattern="[0-9]*" placeholder="Calories">
+                <button onclick='addFood("dinner-calories")' id="addbtn" class="toggle-add">+</button>
+            </div>
+            <ul class="dinner-list">
+            </ul>
+        </div>
+   
+        <div class="list-container">
+            <div class="Snacks">
+                <img src="images/snacksIcon.png" alt="snacksIcon" class="food-icon">
+                <h3>Snacks</h3>
+                <input class="food-name" type="text" placeholder="Food Item">
+                <input class="snacks-calories" type="text" required pattern="[0-9]*" placeholder="Calories">
+                <button onclick='addFood("snacks-calories")' id="addbtn" class="toggle-add">+</button>
+            </div>
+            <ul class="snacks-list">
+            </ul>
+        </div>
+ 
     </section>  
     
     
