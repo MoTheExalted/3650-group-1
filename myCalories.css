@@ -97,13 +97,13 @@
     border-radius: 5px;
     position: relative;
   }
-  input{
+  /* input{
     margin: 20px auto;
     display: block;
     width: 50%;
     padding: 8px;
     border: 1px solid gray;
-  }
+  } */
   #Login{ 
     position: absolute;
     background: white;
@@ -136,7 +136,7 @@
 }
 .popup-close:hover{
   background: red;
-}
+} */
 
 
 
