@@ -125,6 +125,18 @@
     background-color: lightblue;
   }
 
+.popup-close{
+  position: absolute;
+  background-color: #fff;
+  top: -15px;
+  right: -15px;
+  border-radius: 50%;
+  box-shadow: 6px 2px 29px 4px rgba(0, 0,0,0.75);
+  cursor: pointer;
+}
+.popup-close:hover{
+  background: red;
+}
 
 
 
@@ -142,6 +154,7 @@
     width: auto;
 
   }
+  
 
   input:invalid, input:focus:invalid{
     outline: none;
