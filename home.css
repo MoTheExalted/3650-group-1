@@ -1,0 +1,69 @@
+
+
+/* flex tables */
+.flex1{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .flex1 > div {
+    background-color: #ffffff;
+    margin: 5px;
+    padding: 5px;
+    font-size: 10px;
+  }
+  
+  .flex2{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .flex2 > div {
+    background-color: #ffffff;
+    margin: 5px;
+    padding: 5px;
+    font-size: 10px;
+  }
+  
+  .flex3{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .flex3 > div {
+    background-color: #ffffff;
+    margin: 5px;
+    padding: 5px;
+    font-size: 10px;
+  }
+  
+  .flex4{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .flex4 > div {
+    background-color: #ffffff;
+    margin: 5px;
+    padding: 5px;
+    font-size: 10px;
+  }
+  /*********/
+  
+  
+  /*Circles*/
+  .why_us_circles {
+    display:inline;
+    margin-bottom:10px;
+  } 
+  .why_us_circles > * {
+    display: inline;
+    margin: 20px;
+    border-radius: 20px;
+    padding:8px;
+    background-color:aqua;
+    width:fit-content;
+  }
+  /*************/
+
+   
