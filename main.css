@@ -178,39 +178,7 @@ footer ul li a {
       
       
   }
-  
-  .footer-content {
-      display: flex;
-      padding-top: 5px;
-      padding-bottom:5px;
-      /* justify-content: space-between; */
-      align-items:center;
-      color: #fff;
-  }
-  
-  .footer img {
-      /* margin-bottom: 10px; Add some margin to the logo to separate it from the links */
-      align-items:center;
-  }
-  .footer .logo{
-    align-items:center;
-  
-  }
-  .footer nav ul {
-      align-items:center;
-      padding: 0;
-      color: #fff;
-  }
-  
-  .footer nav ul li {
-  
-      display: inline-flex;
-      margin-right: 100px; /* Add some spacing between the links */
-      color: #fff;
-  }
-  /* .footer a:hover {
-    text-decoration: underline; /* Add underline on hover 
-    color: blue; }Change link text color on hover (optional) */
+
     
   body {
     margin: 0;
