@@ -135,3 +135,44 @@ function deleteFood(closeButton) {
     current-=deletedCalories;
     updateBar();
 }
+
+
+
+//got this from gpt. made some changesto fit the website needs
+if (Notification.permission === 'default') {
+    Notification.requestPermission().then(function(permission) {
+        if (permission === 'granted') {
+            console.log('Notification permission granted.');
+            // You can now show notifications
+        } else {
+            console.warn('Notification permission denied.');
+        }
+    });
+}
+
+
+function showNotification() {
+    // Check if the browser supports notifications
+    if (!("Notification" in window)) {
+        console.error("This browser does not support desktop notification");
+        return;
+    }
+
+    // Check if the user has granted permission to show notifications
+    if (Notification.permission === "granted") {
+        // Create a notification
+        var notification = new Notification("Reminder", {
+            body: "You have "+goal-current+" calories left to log. COME ON YOU GOT THIS!",
+        });
+    } else if (Notification.permission !== "denied") {
+        // Ask the user for permission to show notifications
+        Notification.requestPermission().then(function (permission) {
+            if (permission === "granted") {
+                showNotification();
+            }
+        });
+    }
+}
+
+// Set an interval to show the notification every 2 hours
+setInterval(showNotification, 120 * 60 * 1000);

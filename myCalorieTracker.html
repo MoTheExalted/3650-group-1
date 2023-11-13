@@ -48,8 +48,8 @@
         <div class = "form-container">
             <p class="goal1"><strong>My Goal for today will be:</strong></p>
 
-            <form action="/myCalories.html" method="get">
-                <input type="number" id="dailyGoal" value= "calories" required min="0">
+            <form  id="caloriesForm1"  action="myCalories.html" method="get">
+                <input type="number" id="dailyGoal1" value= "calories" required min="0">
 
                 <input type="submit" value="Submit">
             </form>
@@ -58,10 +58,10 @@
         <br>
 
         <div class = "form-container">
-            <p class="goal2"><strong>Base my Goal on current weight:</strong></p>
+            <p class="goal2"><strong>Base my Goal on current weight in imperial pounds (lbs):</strong></p>
 
-            <form action="/myCalories.html" method="get">
-                <input type="number" id="dailyGoal" value="weight" min="0">
+            <form id="caloriesForm2" action="myCalories.html" method="get">
+                <input type="number" id="dailyGoal2" value="weight" min="0">
 
                 <input type="submit" value="Submit">
             </form>
@@ -86,5 +86,30 @@
             <!-- <i class="fa fa-bars" onclick="showMenu()"></i> -->
         </nav>
     </footer>
+
+    <!--Script to send info to the calories page -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('caloriesForm1').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var dailyGoal = document.getElementById('dailyGoal1').value;
+            var url = 'myCalories.html?calories=' + encodeURIComponent(dailyGoal);
+            
+            window.location.href = url;
+        });
+
+        document.getElementById('caloriesForm2').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var weightGoal = document.getElementById('dailyGoal2').value;
+            var url = 'myCalories.html?weight=' + encodeURIComponent(weightGoal);
+            
+            window.location.href = url;
+        });
+    });
+</script>
+
 </body>
 </html>
