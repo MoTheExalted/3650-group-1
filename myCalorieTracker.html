@@ -27,7 +27,7 @@
 
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="myCalories.html">My Caloric Tracker</a></li>
+                    <li><a href="myCalorieTracker.html">My Caloric Tracker</a></li>
                     <li><a href="exercise.html">Exercise</a></li>
                     <li><a href="aboutUs.html">About Us</a></li>
                     <a href="#"><button id="signIn" onclick="">Sign In</button></a>
@@ -40,6 +40,33 @@
 
     <section class="content">
         <!-- We put all the content in here-->
+
+        <h3>What would you like your daily calorie intake to be today?</h3>
+
+        <br>
+
+        <div class = "form-container">
+            <p class="goal1"><strong>My Goal for today will be:</strong></p>
+
+            <form action="/myCalories.html" method="get">
+                <input type="number" id="dailyGoal" value= "calories" required min="0">
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <br>
+
+        <div class = "form-container">
+            <p class="goal2"><strong>Base my Goal on current weight:</strong></p>
+
+            <form action="/myCalories.html" method="get">
+                <input type="number" id="dailyGoal" value="weight" min="0">
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
     </section>  
 
     <footer>
@@ -50,7 +77,7 @@
 
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="myCalories.html">My Caloric Tracker</a></li>
+                    <li><a href="myCalorieTracker.html">My Caloric Tracker</a></li>
                     <li><a href="exercise.html">Exercise</a></li>
                     <li><a href="aboutUs.html">About Us</a></li>
                     

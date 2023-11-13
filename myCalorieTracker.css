@@ -1,0 +1,35 @@
+h3 {
+    text-align:center;
+    margin: 10px;
+    margin-top: 10px;
+}
+
+input[type="number"] {
+    width: 73px; 
+    padding: 5px;
+    margin-left: 20px;
+    margin-right: 40px;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(163, 203, 215);
+    box-shadow: 7px;
+}
+
+input[type="submit"]:active {
+    color:blanchedalmond;
+    background-color: rgb(43, 78, 235);
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.goal1 {
+    margin-right: 60px;
+}
+
