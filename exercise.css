@@ -308,27 +308,37 @@ input{
   pointer-events: none;
 }
 .exercise-content{
-  
+ 
   justify-content: center; /* Center along the horizontal axis */
   align-items: center; 
- 
+  
 }
 
 #arms,#legs,#torso,#back {
+  display: block;
   background-color: #f4f4f4;
   padding: 20px;
   margin: 10px;
   border-radius: 8px;
-  width: 300px;
+  position:relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 400px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   align-items: center;
-  
+  text-align: center;
  
+}
+.arm-exercises,.leg-exercises,.torso-exercises,.back-exercises{
+  text-align: left;
 }
 #arm-title,#leg-title,#torso-title,#back-title{
   font-size: 30px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: center;
+  align-items: center;
+  
 }
 
 .description{
