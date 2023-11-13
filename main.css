@@ -6,6 +6,11 @@ ul li{
   margin-top: 15px;
 }
 
+body{
+  margin: 0;
+  padding: 0;
+}
+
 
 /* nav styles */
   nav {
@@ -70,6 +75,40 @@ ul li{
   transition: 0.5s;
 }
 
+/* Code down here is for the footer */
+footer {
+  background-color: #D3D3D3; /* Change this to the background color you want */
+  color: #fff; /* Change this to the text color you want */
+  margin-bottom: 0;
+  margin-top: auto;
+  width: 100%;
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer ul {
+  padding: 0; /* Remove default padding */
+  margin-bottom: 0;
+}
+
+footer ul li {
+  list-style: none;
+  /* display: inline-block; Remove this to allow items to take full width */
+  padding: 8px 12px;
+  position: relative;
+  color: black;
+}
+
+footer ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+}
+
 @media (max-width:700px) {
   .navLinks ul li {
     display: block;
@@ -116,99 +155,13 @@ ul li{
   .navLinks button{
     margin-top: 20px;
   }
+
+  footer{
+    position: static;
+    
+  }
 }
 /******************/
 
 
-/* Code down here is for the footer*/
-.footer {
-      position: relative;
-      border-top-width:thin;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: #D3D3D3; /* Change this to the background color you want */
-      color: #fff; /* Change this to the text color you want */
-      text-align: center;
-      margin-top: 10px;
-      
-      
-  }
-  
-  .footer-content {
-      display: flex;
-      padding-top: 5px;
-      padding-bottom:5px;
-      /* justify-content: space-between; */
-      align-items:center;
-      color: #fff;
-  }
-  
-  .footer img {
-      /* margin-bottom: 10px; Add some margin to the logo to separate it from the links */
-      align-items:center;
-  }
-  .footer .logo{
-    align-items:center;
-  
-  }
-  .footer nav ul {
-      align-items:center;
-      padding: 0;
-      color: #fff;
-  }
-  
-  .footer nav ul li {
-  
-      display: inline-flex;
-      margin-right: 100px; /* Add some spacing between the links */
-      color: #fff;
-  }
-  /* .footer a:hover {
-    text-decoration: underline; /* Add underline on hover 
-    color: blue; }Change link text color on hover (optional) */
-    
-  body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh; /* Set a minimum height to ensure the footer stays at the bottom */
-    display: flex;
-    flex-direction: column;
-}
-  .navLinks2{
-    flex: 1;
-    text-align: center;
-  }
-  .footer nav ul li a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-  }
-  .footer nav ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;  
-  }
-    
-  .footer nav ul li a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-  }
-    
-  .footer nav ul li::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: aqua;
-    display: flex;
-    margin: auto;
-    transition: 0.5s;
-  }
-  .footer nav ul li:hover::after {
-    width: 100%;
-  }
-  /* End footer*/
+
