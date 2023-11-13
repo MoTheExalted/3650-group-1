@@ -112,7 +112,7 @@ input{
 #Login:hover{
   background-color: lightblue;
 }
-.close{
+.popup-close{
   position: absolute;
   background-color: #fff;
   top: -15px;
@@ -121,6 +121,6 @@ input{
   box-shadow: 6px 2px 29px 4px rgba(0, 0,0,0.75);
   cursor: pointer;
 }
-.close:hover{
+.popup-close:hover{
   background: red;
 }

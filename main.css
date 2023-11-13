@@ -164,4 +164,161 @@ footer ul li a {
 /******************/
 
 
-
+/* Code down here is for the footer*/
+.footer {
+      position: relative;
+      border-top-width:thin;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #D3D3D3; /* Change this to the background color you want */
+      color: #fff; /* Change this to the text color you want */
+      text-align: center;
+      margin-top: 10px;
+      
+      
+  }
+  
+  .footer-content {
+      display: flex;
+      padding-top: 5px;
+      padding-bottom:5px;
+      /* justify-content: space-between; */
+      align-items:center;
+      color: #fff;
+  }
+  
+  .footer img {
+      /* margin-bottom: 10px; Add some margin to the logo to separate it from the links */
+      align-items:center;
+  }
+  .footer .logo{
+    align-items:center;
+  
+  }
+  .footer nav ul {
+      align-items:center;
+      padding: 0;
+      color: #fff;
+  }
+  
+  .footer nav ul li {
+  
+      display: inline-flex;
+      margin-right: 100px; /* Add some spacing between the links */
+      color: #fff;
+  }
+  /* .footer a:hover {
+    text-decoration: underline; /* Add underline on hover 
+    color: blue; }Change link text color on hover (optional) */
+    
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Set a minimum height to ensure the footer stays at the bottom */
+    display: flex;
+    flex-direction: column;
+}
+  .navLinks2{
+    flex: 1;
+    text-align: center;
+  }
+  .footer nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .footer nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;  
+  }
+    
+  .footer nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+  }
+    
+  .footer nav ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: aqua;
+    display: flex;
+    margin: auto;
+    transition: 0.5s;
+  }
+  .footer nav ul li:hover::after {
+    width: 100%;
+  }
+  /* End footer*/
+/**/
+  .popup{
+  background: rgba(0, 0,0,0.6);
+  backdrop-filter: blur(3px);
+  width:100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.popup-content{
+  height: 250px;
+  width: 500px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+}
+.input-user{
+  margin: 20px auto;
+  display: block;
+  width: 50%;
+  padding: 8px;
+  border: 1px solid gray;
+}
+.input-pw{
+  margin: 20px auto;
+  display: block;
+  width: 50%;
+  padding: 8px;
+  border: 1px solid gray;
+}
+#Login{ 
+  position: absolute;
+  background: white;
+  padding: 10px 50px;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: 0px 0px;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: 0.4s;
+  bottom: 25px; 
+  right: 20px;
+  
+}
+#Login:hover{
+  background-color: lightblue;
+}
+.pop-close{
+  position: absolute;
+  background-color: #fff;
+  top: -15px;
+  right: -15px;
+  border-radius: 50%;
+  box-shadow: 6px 2px 29px 4px rgba(0, 0,0,0.75);
+  cursor: pointer;
+}
+.pop-close:hover{
+  background: red;
+}
