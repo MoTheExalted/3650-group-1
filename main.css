@@ -109,6 +109,8 @@ footer ul li a {
   display: flex;
 }
 
+
+/* phone css changes */
 @media (max-width:700px) {
   .navLinks ul li {
     display: block;
@@ -161,23 +163,7 @@ footer ul li a {
     
   }
 }
-/******************/
 
-
-/* Code down here is for the footer*/
-.footer {
-      position: relative;
-      border-top-width:thin;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: #D3D3D3; /* Change this to the background color you want */
-      color: #fff; /* Change this to the text color you want */
-      text-align: center;
-      margin-top: 10px;
-      
-      
-  }
 
     
   body {
@@ -187,44 +173,7 @@ footer ul li a {
     display: flex;
     flex-direction: column;
 }
-  .navLinks2{
-    flex: 1;
-    text-align: center;
-  }
-  .footer nav ul li a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-  }
-  .footer nav ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;  
-  }
-    
-  .footer nav ul li a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-  }
-    
-  .footer nav ul li::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: aqua;
-    display: flex;
-    margin: auto;
-    transition: 0.5s;
-  }
-  .footer nav ul li:hover::after {
-    width: 100%;
-  }
-  /* End footer*/
-/**/
+
   .popup{
   background: rgba(0, 0,0,0.6);
   backdrop-filter: blur(3px);

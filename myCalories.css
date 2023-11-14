@@ -90,13 +90,16 @@ p{
 
 .add-item{
     width: 15%;
+    margin-bottom:90px;
 }
 
 .integer-input {
     width: 15%;
 }
 
-
+button {
+    border-radius: 5px;
+}
 
 /* valid/invalid */
 .close{
@@ -126,8 +129,12 @@ p{
 
 
 @media (max-width:700px) {
+    h3{
+        align-items: center;
+        justify-content: center;
+    }
     .list-container{
-        width: 100%;
+        width: 60%;
         padding: 10px;
         margin: 10px;
         /* min-width: 300px; */
@@ -136,6 +143,13 @@ p{
     .add-item, .integer-input{
         width: calc(20%-20px);
         margin-bottom: 10px;
+    }
+    button{
+        display: flex;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 10px;
+        
     }
 
 }
