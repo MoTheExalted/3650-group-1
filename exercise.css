@@ -62,20 +62,28 @@ input{
 
 
 /*******/
+#image-container {
+  position: relative;
+ 
+}
+
 .body-image{
-  display: grid;
-  margin-left: auto;
+  display:grid;
+  margin-left:auto;
   margin-right: auto;
   width: 450px;
   height: 450px;
   position: relative;
+  }
 
-}
-/**/
-.overlaytorso {
+  
+#overlaytorso {
   position: absolute;
-  top:250px;
-  left:813px;
+ 
+  top: 50%;
+  left: 50%;
+  transform: translate(-140px, -100%);
+
   width:80px;
   height: 150px;
  
@@ -96,11 +104,13 @@ input{
 /**/
 .overlayleftarm1 {
   position: absolute;
-  top:250px;
-  left:770px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-208px, -75%);
   width:35px;
   height: 150px;
   rotate:10deg;
+  
 
 }
 
@@ -120,12 +130,13 @@ input{
 /**/
 .overlayrightarm1 {
   position: absolute;
-  top:250px;
-  left:898px;
+  top: 50%;
+  left: 50%;
+  transform: translate(15px, 100%); 
   width:35px;
   height: 150px;
   rotate:165deg;
- 
+
 }
 
 .overlayrightarm1:hover {
@@ -143,8 +154,9 @@ input{
 /**/
 .overlayleftleg1 {
   position: absolute;
-  top:390px;
-  left:805px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-145px, -1%); 
   width:45px;
   height: 180px;
 }
@@ -162,9 +174,9 @@ input{
 /**/
 #overlayrightleg1 {
   position: absolute;
-  top:390px;
-  left:855px;
-
+  top: 50%;
+  left: 50%;
+  transform: translate(-95px, -1%); 
   width:45px;
   height: 180px;
  
@@ -185,8 +197,9 @@ input{
 /**/
 #overlayleftarm2 {
   position: absolute;
-  top:250px;
-  left:972px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-15px, -90%); 
   rotate:12deg;
   width:35px;
   height: 180px;
@@ -206,8 +219,9 @@ input{
 /**/
 #overlayrightarm2 {
   position: absolute;
-  top:250px;
-  left:1090px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-175px, 70%); 
   rotate: 165deg;
   width:35px;
   height: 150px;
@@ -229,8 +243,9 @@ input{
 /**/
 #overlayback {
   position: absolute;
-  top:250px;
-  left:1010px;
+  top: 50%;
+  left: 50%;
+  transform: translate(60px, -100%); 
   width:80px;
   height: 150px;
 ;
@@ -249,8 +264,9 @@ input{
 /**/
 #overlayleftleg2 {
   position: absolute;
-  top:390px;
-  left:1008px;
+  top: 50%;
+  left: 50%;
+  transform: translate(55px, -10%); 
   width:45px;
   height: 180px;
 
@@ -271,8 +287,9 @@ input{
 /**/
 #overlayrightleg2 {
   position: absolute;
-  top:390px;
-  left:1050px;
+  top: 50%;
+  left: 50%;
+  transform: translate(100px, -10%); 
   width:45px;
   height: 180px;
 
@@ -289,4 +306,54 @@ input{
 #overlayrightleg2:hover:after{
 
   pointer-events: none;
+}
+.exercise-content{
+ 
+  justify-content: center; /* Center along the horizontal axis */
+  align-items: center; 
+  
+}
+
+#arms,#legs,#torso,#back {
+  display: block;
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  position:relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  text-align: center;
+ 
+}
+.arm-exercises,.leg-exercises,.torso-exercises,.back-exercises{
+  text-align: left;
+}
+#arm-title,#leg-title,#torso-title,#back-title{
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  align-items: center;
+  
+}
+
+.description{
+  text-align: center;
+}
+/*selection animation*/
+.highlighted {
+  animation: blink 1.5s; 
+}
+
+@keyframes blink {
+  from,to {
+      background-color: white; 
+  }
+  50% {
+      background-color: rgba(136, 134, 134, 0.719); 
+  }
 }
