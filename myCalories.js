@@ -1,43 +1,50 @@
 //these values will update the progress bar based on the input calories
 //first need to get the data from the previous page which was a form that sent over some data
 var urlParams=new URLSearchParams(window.location.search);
-var weight=parseFloat(urlParams.get("weight"));
+var gender = urlParams.get("gender");
+var feet = urlParams.get("feet");
+var inches = urlParams.get("inches");
+var age = urlParams.get("age");
+var weight = urlParams.get("weight");
+weight=weight*0.453592 //pound to kgs
 var calories=parseInt(urlParams.get("calories"));
 var goal=0;
 
 //this will get updated as the user inputs food and will be divided by the goal to show a percent
 var current=0;
 
+//using the Mifflin-St Jeor equations to get bmr
 //computed daily calories based off user input
-if (weight){
-    weight=(weight*15)-300;
-    goal=weight;
-    document.querySelector('.progress-bar h3').textContent+=goal;
+if (gender === "male") {
+    // BMR for men: BMR = 10 * weight (kg) + 6.25 * height (cm) - 5 * age (years) + 5
+    goal = (10 * weight + 6.25 * (feet * 30.48 + inches * 2.54) - 5 * age + 5)-150;
+} else if (gender === "female") {
+    // BMR for women: BMR = 10 * weight (kg) + 6.25 * height (cm) - 5 * age (years) - 161
+    bmr = (10 * weight + 6.25 * (feet * 30.48 + inches * 2.54) - 5 * age - 161)-150;
 }else if(calories){
     goal=calories
-    document.querySelector('.progress-bar h3').textContent+=goal;
 }
 
-
+document.querySelector('.progress-bar h3').textContent+=parseInt(goal);
 
 //main function that adds food and increments calories so that the progress bar can be recalculated
 
-function addFood(mealClassName) {
+function addFood(mealClassCal) {
     // First, check if the calories input field is not empty
-    let calInput = document.querySelector(`.${mealClassName}`);
+    let calInput = document.querySelector(`.${mealClassCal}`);
     if (calInput.value.trim() === '') {
         calInput.value=0;
         console.log(calInput.value);
         return;
     }
 
-    //update current variable with food input
-    current+=parseInt(calInput.value);
-
+    //update current variable with food input if calories are greater than 0
     // Call the validateCalories function
-   if(!validateCalories(mealClassName)){
+   if(!validateCalories(mealClassCal)){
     return;
    }
+
+    current+=parseInt(calInput.value);
 
    //At this point either the calories were correctly stated, or 
    //some food was placed in without any calories or 0 because the user did not know or it was actually 0
@@ -113,14 +120,13 @@ function updateBar(){
 
 }
 
-function validateCalories(mealClassName) {
-    let calInput = document.querySelector(`.${mealClassName}`);
+function validateCalories(mealClassCal) {
+    let calInput = document.querySelector(`.${mealClassCal}`);
+    let value = parseInt(calInput.value);
 
-    if (calInput.validity.patternMismatch) {
+    if (isNaN(value) || value < 0) {
         return false;
     } else {
-        calInput.setCustomValidity("");
-        console.log("good");
         return true;
     }
 }
@@ -132,7 +138,14 @@ function deleteFood(closeButton) {
 
     //gets the calories from the list item. The first substring with a number in it
     var deletedCalories=parseFloat(food.textContent.match(/\d+/)[0]);
-    current-=deletedCalories;
+
+    if (current-deletedCalories<0){
+        current=0;
+    }
+    else{
+        current-=deletedCalories;
+    }
+
     updateBar();
 }
 

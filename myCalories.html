@@ -42,9 +42,12 @@
         <span class="progress__text">0</span>
     </div>
     <p>Track Your Progress through this bar and the lists below the bar.<br>
-        Weight will calculate what you need to maintain that weight minus 300.
-        <br>This is so that you can lose about a pound every week!
+        If you did not know how many calories to track we got you! <br>
+        We took info you gave us and used the Mifflin-St Jeor equations. <br>
+        They basically tell a person what they need to maintain weight. <br>
     </p>
+
+    <p>Remember to eat below if you want to lose weight!</p>
     </section>
 
      <section class="content">
@@ -56,7 +59,7 @@
                 <img src="images/breakfastIcon.png" alt="breakfastIcon" class="food-icon">
                 <h3>Breakfast</h3>
                 <input class="food-name" type="text"  placeholder="Food Item">
-                <input class="breakfast-calories" type="text" required pattern="[0-9]*" placeholder="Calories">
+                <input class="breakfast-calories" type="text" required pattern="[0-9]*" placeholder="Calories" min="0" required>
                 <button onclick='addFood("breakfast-calories")' id="addbtn" class="toggle-add">+</button>
             </div>
             <ul class="breakfast-list">
@@ -68,7 +71,7 @@
                 <img src="images/lunchIcon.png" alt="lunchIcon" class="food-icon">
                 <h3>Lunch</h3>
                 <input class="food-name" type="text" placeholder="Food Item">
-                <input class="lunch-calories" type="text" required pattern="[0-9]*" placeholder="Calories">
+                <input class="lunch-calories" type="text" required pattern="[0-9]*" placeholder="Calories" min="0" required>
                 <button onclick='addFood("lunch-calories")'id="addbtn" class="toggle-add">+</button>
             </div>
             <ul class="lunch-list">
@@ -80,7 +83,7 @@
                 <img src="images/dinnerIcon.png" alt="dinnerIcon" class="food-icon">
                 <h3>Dinner</h3>
                 <input class="food-name" type="text" placeholder="Food Item">
-                <input class="dinner-calories" type="text" required pattern="[0-9]*" placeholder="Calories">
+                <input class="dinner-calories" type="text" required pattern="[0-9]*" placeholder="Calories" min="0" required>
                 <button onclick='addFood("dinner-calories")' id="addbtn" class="toggle-add">+</button>
             </div>
             <ul class="dinner-list">
@@ -92,7 +95,7 @@
                 <img src="images/snacksIcon.png" alt="snacksIcon" class="food-icon">
                 <h3>Snacks</h3>
                 <input class="food-name" type="text" placeholder="Food Item">
-                <input class="snacks-calories" type="text" required pattern="[0-9]*" placeholder="Calories">
+                <input class="snacks-calories" type="text" required pattern="[0-9]*" placeholder="Calories" min="0" required>
                 <button onclick='addFood("snacks-calories")' id="addbtn" class="toggle-add">+</button>
             </div>
             <ul class="snacks-list">
