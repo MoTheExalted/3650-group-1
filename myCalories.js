@@ -17,10 +17,10 @@ var current=0;
 //computed daily calories based off user input
 if (gender === "male") {
     // BMR for men: BMR = 10 * weight (kg) + 6.25 * height (cm) - 5 * age (years) + 5
-    goal = (10 * weight + 6.25 * (feet * 30.48 + inches * 2.54) - 5 * age + 5)-150;
+    goal = (10 * weight + 6.25 * (feet * 30.48 + inches * 2.54) - 5 * age + 5);
 } else if (gender === "female") {
     // BMR for women: BMR = 10 * weight (kg) + 6.25 * height (cm) - 5 * age (years) - 161
-    bmr = (10 * weight + 6.25 * (feet * 30.48 + inches * 2.54) - 5 * age - 161)-150;
+    goal = (10 * weight + 6.25 * (feet * 30.48 + inches * 2.54) - 5 * age - 161);
 }else if(calories){
     goal=calories
 }
